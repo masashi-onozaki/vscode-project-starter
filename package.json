@@ -1,0 +1,17 @@
+{
+  "name": "corporate-site-tools",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write \"**/*.{php,html,css,js,json}\"",
+    "format:check": "prettier --check \"**/*.{php,html,css,js,json}\"",
+    "minify": "node scripts/minify-on-save.cjs styles.css && node scripts/minify-on-save.cjs script.js",
+    "build": "npm run format && npm run minify"
+  },
+  "devDependencies": {
+    "@prettier/plugin-php": "^0.24.0",
+    "clean-css": "^5.3.3",
+    "html-minifier-terser": "^7.2.0",
+    "prettier": "^3.6.2",
+    "terser": "^5.44.0"
+  }
+}
